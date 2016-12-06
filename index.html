@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="http://res.cloudinary.com/kevin-borah/image/upload/v1481050719/aperture_gezoh5.png" />
+  <link rel="mask-icon" type="" href="http://res.cloudinary.com/kevin-borah/image/upload/v1481050719/aperture_gezoh5.png" />
+  <title>J and E Kapas Photography</title>
+  
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+      <style>
+      body {
+   background-color: #666666;
+}
+.jeklogo {
+   margin: 40px auto 20px auto;
+}
+.btn-primary {
+   background-color: #888888;
+   border-color: #444444;
+}
+.photo {
+   margin: 40px auto 20px auto;
+}
+h4 {
+   color: #FFFFFF;
+}
+.btn-link {
+   color: #FFFFFF;
+   padding: 0 4px 0 4px;
+   border-color: #FFFFFF;
+}
+.footer {
+   margin-top: 20%;
+   margin-bottom: 10px;
+}
+    </style>
+
+  
+  
+  
+  
+</head>
+
+<body translate="no" >
+
+  <div class="container-fluid">
+   <div class="row text-center">
+      <img alt="J and E Kapas Photography Logo" class="img jeklogo img-responsive" src="http://res.cloudinary.com/kevin-borah/image/upload/v1480976921/Logo_Website_Header_u4qigf.png">
+   </div>
+   <div class="row">
+      <div class="col-md-offset-4 col-md-4 text-right">
+         <form>
+            <input type="text" class="form-control" placeholder="Please enter your file number" id="file">
+            <button style="margin-top: 10px" type="button" class="btn btn-primary" id="enter">Enter</button>
+         </form>
+      </div>
+      
+   </div>
+   <div class="row">
+      <div class="col-xs-12 text-center" id="photo">
+                  
+      </div>
+   </div>
+   <div class="row footer" id="footer">
+      <div class="col-md-4">
+         <h4 class="text-center">For problems with your photo click <button type="button" class="btn btn-link btn-lg" id="help">Here</button></h4>
+      </div>
+      <div class="col-md-4">
+         <h4 class="text-center">J and E Kapas Photography 2016</h4>
+      </div>
+      <div class="col-md-4">
+         <h4 class="text-center">For Higher Resolution Photos or Print Releases email jeff.kapas@gmail.com</h4>
+      </div>
+   </div>
+</div>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+    <script>
+    var file = "";
+$("#enter").on("click", function() {
+   file = $("#file").val();
+   $("#photo").html('<img class="img img-responsive photo" alt="Here\'s Your Polar Express Photo. Merry Christmas" src="https://s3.amazonaws.com/jeffkapas/Chick-Fil-A/' + file + '.jpg">')
+   console.log(file);
+});
+$("#help").on("click", function() {
+   alert("Refresh the page.\nMake sure you entered the correct file number.\nIf problems persist please email jeff.kapas@gmail.com.");
+});
+$("#file").keypress(function(event) {
+      return event.keyCode != 13;
+  });
+  </script>
+
+  
+  
+
+</body>
+</html>
